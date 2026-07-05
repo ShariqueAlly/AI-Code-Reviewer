@@ -16,11 +16,28 @@ function App() {
   const [review, setReview] = useState("");
   const [loading, setLoading] = useState(false);
 
+  // async function reviewcode() {
+  //   setLoading(true);
+  //   setReview("");
+  //   try {
+  //     const response = await axios.post("http://localhost:3004/ai/get-review", {
+  //       code,
+  //     });
+  //     const data = response.data?.response ?? response.data;
+  //     setReview(typeof data === "string" ? data : JSON.stringify(data, null, 2));
+  //   } catch (error) {
+  //     console.error("Error submitting code:", error);
+  //     setReview("Failed to load review");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // }
   async function reviewcode() {
     setLoading(true);
     setReview("");
     try {
-      const response = await axios.post("http://localhost:3004/ai/get-review", {
+      // Changed from localhost to your live Render backend URL
+      const response = await axios.post("https://ai-code-reviewer-88jd.onrender.com/ai/get-review", {
         code,
       });
       const data = response.data?.response ?? response.data;
