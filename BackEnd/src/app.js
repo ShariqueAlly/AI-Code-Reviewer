@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-   origin: '*',
+   origin: 'https://ai-code-reviewer-frontend-h10x.onrender.com',
    methods: ["GET", "POST"]
 }));
 
