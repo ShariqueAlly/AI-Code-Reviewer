@@ -1,0 +1,18 @@
+# Node modules
+FrontEnd/node_modules/
+BackEnd/node_modules/
+
+# Build output
+FrontEnd/dist/
+
+# Environment files
+BackEnd/.env
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+
+# VS Code settings
+.vscode/

@@ -1,0 +1,129 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #1b2735 0%, #0f172a 100%);
+  color: #f7fafc;
+}
+#root {
+  width: 100%;
+  height: 100%;
+}
+.app-shell {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 23, 42, 0.95);
+}
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1.5rem 0;
+  text-align: center;
+}
+.app-logo {
+  width: 56px;
+  height: 56px;
+}
+.app-title h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+.app-title p {
+  margin: 0.25rem 0 0;
+  color: #d1d5db;
+  font-size: 0.95rem;
+}
+main{
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+main .left, main .right{
+  height: calc(100vh - 3rem - 2rem);
+  width: 100%;
+}
+
+main .left{
+  background-color: #484444;
+  position: relative;
+}
+ main .right{
+  background-color: #e5e5e5;
+  padding: 1rem;
+  overflow: auto;
+}
+.review-output {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.review-output h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+}
+.review-output pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #111;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+.review-output p {
+  color: #555;
+}
+.left .code, .code pre, .code pre code{
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  margin: 0;
+}
+main .review{
+  position: absolute;
+  bottom: 1rem;
+  right:1rem;
+  background-color: rgb(227, 176, 114);
+  padding: 0.5rem 2rem;
+  user-select: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+main .review:hover {
+  transform: scale(1.05);
+  background-color: rgb(245, 190, 125);
+}
+main .review.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  background-color: rgb(220, 180, 110);
+}
+main .review:active {
+  transform: scale(0.98);
+}
